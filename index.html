@@ -2,63 +2,7 @@
 <head>
 <title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-
-body {
-  font-family: monospace;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-#result {
-  font-size: 30px;
-  text-align: center;
-}
-
-input {
-  width: 500px;
-  font-size: 18px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 35px;
-  font-weight: normal;
-}
-
-section {
-  width: 400px;
-	height: 350px; 
-	background-position: center; 
-	background-repeat: no-repeat; 
-  margin: auto;
-  border: 1px dotted black;
-}
-
-button {
-  display: flex;
-  align-items: center;
-}
-
-#btn {
-  margin-left: 2px;
-}
-
-#gen {
-  display: flex;
-  font-size: 18px;
-  margin: auto;
-}
-
-.bton {
-  display: flex;
-  gap: 3px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>
@@ -74,13 +18,16 @@ GENERADOR DE PERSONAJES<br/> ALEATORIOS<br/>
 <button id="copy">Copy_Key</button>
 </div>
 </main>
-
 <br/><br/>
 <div id="result">
 </div>
+<br/><br/>
+
+<section></section>
 
 <br/><br/>
-<section></section>
+<div id="result2"></div>
+
 
 <script>
 document.getElementById('btn').setAttribute('onclick', 'call()')
@@ -109,35 +56,40 @@ function call() {
   let result = document.getElementById('result').innerHTML 
 
   const image = [
-    'url("https://trome.com/resizer/W4dpVVVNySl638i0rD5gNwC2hes=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/7WS6W3HNOJGDNAXWXUQSVNGJOM.jpg")',
-
-    'url("https://elcomercio.pe/resizer/JeOgNY2VV2o7nxYTXceg0o3ThS8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/I3Z72BKI2FATNH6FYMVYXUY6RU.jpg")',
-
-    'url("https://elcomercio.pe/resizer/J4U3CH_FUwWuYnSi1BQbXVrBoIU=/980x528/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/WZCLIHHOYFGMFNLBHDORIJW3LU.jpg")'
-  ];
+    { name: "Jorgito tu Terror", src: "https://e.radio-grpp.io/normal/2022/03/25/074807_1237177.jpg" },
+    { name: "Ricardo el Inmortal", src: "https://larepublica.cronosmedia.glr.pe/original/2022/01/18/61e73bca2b61d2649f3d40cb.jpg" },
+    { name: "Gerardo", src: "https://imgmedia.larepublica.pe/640x640/larepublica/migration/images/SMDAWVNKANE3RBAJVZBHIIKU4U.webp" },
+    { name: "El Cojo", src: "https://larepublica.cronosmedia.glr.pe/migration/images/MW3DA4AKQFCCHMRNEFGO42S3LQ.jpg" },
+  ]
 
   if (inp != result || inp == "") {
     alert("GENERA UN CODIGO")
   } else {
-    document.getElementById('result').innerHTML = "ERES UNNNNNN..."
-    const pic = document.querySelector('section');
+    document.getElementById('result').innerHTML = "Cargando..."
+
+    const pic = document.querySelector('section')
 
     setTimeout(function() {
       cn++
+
       if (cn >= 1) {
-
-
         let randName = Math.floor(Math.random() * image.length)
-        let img = image[randName];
-        pic.style.backgroundImage = img 
-        pic.style.backgroundSize = "500px"
+        let img = image[randName]
+
+        pic.style.backgroundImage = `url(${img.src})`
+        pic.style.backgroundSize = "cover"
         pic.style.transition = "all 3s"
-        pic.style.width = "400px"
-        pic.style.height = "350px"
+        pic.style.width = "300px"
+        //pic.style.height = "350px"
         pic.style.border = "1px dotted black"
 
+        document.getElementById('result').innerHTML = "ERESSSS"
+        document.getElementById('result2').innerHTML = img.name
         console.log(img)
+        //document.getElementById('result2').innerHTML = img.name
       }
+
+
     }, 3000)
   }
   document.getElementById('input').value = ""
@@ -157,13 +109,14 @@ function generator() {
     }
   }, 1000)
 
-  document.getElementById('result').innerHTML = "Generando..."
+  document.getElementById('result').innerHTML = "Pending..."
 }
 
 function copiar() {
   let result = document.getElementById('result').innerHTML 
   navigator.clipboard.writeText(result)
 }
+
 </script>
 </body>
 </html>
