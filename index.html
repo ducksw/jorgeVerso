@@ -3,8 +3,11 @@
 <title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
+
 body {
+  font-family: monospace;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -22,15 +25,13 @@ input {
 
 h1 {
   text-align: center;
-  font-family: monospace;
-  font-size: 48px;
+  font-size: 35px;
   font-weight: normal;
 }
 
 section {
-  max-width: 100%;
-  width: 500px;
-	height: 500px; 
+  width: 400px;
+	height: 350px; 
 	background-position: center; 
 	background-repeat: no-repeat; 
   margin: auto;
@@ -43,12 +44,18 @@ button {
 }
 
 #btn {
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
-
 #gen {
-  margin-left: 5px;
+  display: flex;
+  font-size: 18px;
+  margin: auto;
+}
+
+.bton {
+  display: flex;
+  gap: 3px;
 }
 
 </style>
@@ -58,19 +65,105 @@ button {
 GENERADOR DE PERSONAJES<br/> ALEATORIOS<br/>
 <span></span>
 </h1>
+<button id="gen">Generar_Key</button>
+<br/>
 <main>
 <input type="text" id="input">
+<div class="bton">
 <button id="btn">CALL</button>
-<button id="gen">GENERAR</button>
+<button id="copy">Copy_Key</button>
+</div>
 </main>
 
 <br/><br/>
 <div id="result">
 </div>
 
-<br/><br/><br/>
+<br/><br/>
 <section></section>
 
-<script src="client.js"></script>
+<script>
+document.getElementById('btn').setAttribute('onclick', 'call()')
+document.getElementById('gen').setAttribute('onclick', 'generator()')
+document.getElementById('copy').setAttribute('onclick', 'copiar()')
+
+const txt = "43pgpvwinkK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSHkmuDUyFqCjBiCPLYePT1StfQn1uZhkPJczzzFXjYZ1U";
+var cont = 0;
+let cn = 0
+
+
+function ran() {
+  let r = ""
+  let c = 0;
+
+  while (c < 30) {
+    r += txt.charAt(Math.floor(Math.random() * txt.length));
+    c += 1
+  }
+
+  return r
+}
+
+function call() {
+  let inp = document.getElementById('input').value
+  let result = document.getElementById('result').innerHTML 
+
+  const image = [
+    'url("https://trome.com/resizer/W4dpVVVNySl638i0rD5gNwC2hes=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/7WS6W3HNOJGDNAXWXUQSVNGJOM.jpg")',
+
+    'url("https://elcomercio.pe/resizer/JeOgNY2VV2o7nxYTXceg0o3ThS8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/I3Z72BKI2FATNH6FYMVYXUY6RU.jpg")',
+
+    'url("https://elcomercio.pe/resizer/J4U3CH_FUwWuYnSi1BQbXVrBoIU=/980x528/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/WZCLIHHOYFGMFNLBHDORIJW3LU.jpg")'
+  ];
+
+  if (inp != result || inp == "") {
+    alert("GENERA UN CODIGO")
+  } else {
+    document.getElementById('result').innerHTML = "ERES UNNNNNN..."
+    const pic = document.querySelector('section');
+
+    setTimeout(function() {
+      cn++
+      if (cn >= 1) {
+
+
+        let randName = Math.floor(Math.random() * image.length)
+        let img = image[randName];
+        pic.style.backgroundImage = img 
+        pic.style.backgroundSize = "500px"
+        pic.style.transition = "all 3s"
+        pic.style.width = "400px"
+        pic.style.height = "350px"
+        pic.style.border = "1px dotted black"
+
+        console.log(img)
+      }
+    }, 3000)
+  }
+  document.getElementById('input').value = ""
+}
+
+function generator() {
+  var limit = setInterval(function() {
+    cont++
+
+    let random = ran(50)
+    //console.log(`###### Loops${cont} ######`)
+    console.log(`======> ${random}`)
+    document.getElementById('result').innerHTML = random
+
+    if (cont >= 1) {
+      clearInterval(limit)
+    }
+  }, 1000)
+
+  document.getElementById('result').innerHTML = "Generando..."
+}
+
+function copiar() {
+  let result = document.getElementById('result').innerHTML 
+  navigator.clipboard.writeText(result)
+}
+</script>
 </body>
 </html>
