@@ -1,0 +1,76 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body {
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  font-size: 30px;
+  text-align: center;
+}
+
+input {
+  width: 500px;
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+section {
+  max-width: 100%;
+  width: 500px;
+	height: 500px; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+  margin: auto;
+  border: 1px dotted black;
+}
+
+button {
+  display: flex;
+  align-items: center;
+}
+
+#btn {
+  margin-left: 5px;
+}
+
+
+#gen {
+  margin-left: 5px;
+}
+
+</style>
+</head>
+<body>
+<h1>
+GENERADOR DE PERSONAJES<br/> ALEATORIOS<br/>
+<span></span>
+</h1>
+<main>
+<input type="text" id="input">
+<button id="btn">CALL</button>
+<button id="gen">GENERAR</button>
+</main>
+
+<br/><br/>
+<div id="result">
+</div>
+
+<br/><br/><br/>
+<section></section>
+
+<script src="client.js"></script>
+</body>
+</html>
