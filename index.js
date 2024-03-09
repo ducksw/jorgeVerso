@@ -96,7 +96,6 @@ function call() {
 
         document.getElementById('result').innerHTML = "Eres"
         document.getElementById('result2').innerHTML = img.name
-        document.getElementById('result2').innerHTML = img.color
         console.log(img)
       }
     }, 3000)
