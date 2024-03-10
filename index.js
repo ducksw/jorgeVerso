@@ -136,7 +136,7 @@ function upArchive() {
 }
 
 function upLink() {
-  let nm = prompt("Coloca del personaje")
+  let nm = prompt("Coloca el nombre del personaje")
   let URL = prompt("Coloca el URL")
 
   if (nm == ""|| URL == "") {
