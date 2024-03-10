@@ -16,11 +16,10 @@ main {
 }
 
 #result2 {
-  font-size: 20px;
+  font-size: 30px;
   max-width: 100%;
   width: 400px;
   margin: auto;
-  text-align: center;
 }
 
 input {
