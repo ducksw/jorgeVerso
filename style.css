@@ -86,7 +86,6 @@ button {
   background-color: beige;
   max-width: 100%;
   width: 350px;
-  height: :400px;
   margin: auto;
   margin-left: 5px;
   box-shadow: 0px 0px 10px black;
@@ -107,3 +106,29 @@ button {
   font-family: monospace;
 }
 
+h3 {
+  text-align: center;
+}
+
+#imageup {
+  font-size: 18px;
+}
+
+hr {
+  border: 1px dotted black;
+  max-width: 100%;
+  width: 600px;
+  margin: auto;
+}
+
+#file {
+  max-width: 100%;
+  width: 173px;
+  border: 1px solid black;
+}
+
+.subir {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

@@ -5,17 +5,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-
 <button id="btn-info">Información</button>
 
 <div class="frame" id="frame">
 <p>
-EL BOTON llamado <b>Generar_Key</b>, te genera caracteres random y esos caracteres lo tienes que copiar y pegar en el input en celular lo puedes copiar utilizando el boton <b>Copy_Key</b> y el boton <b>CALL</b> te da el resultado.
+EL BOTON llamado <b>Generar_Key</b>, te genera caracteres random y esos caracteres lo tienes que copiar y pegar en el input en celular lo puedes copiar utilizando el boton <b>Copy_Key</b> y el boton <b>CALL</b> o dale enter y te dara el resultado.
 </p>
 </div>
 
 <h1>
-GENERADOR DE PERSONAJES<br/> ALEATORIOS<br/>
+GENERADOR DE <a href="">PERSONAJES</a><br/> ALEATORIOS<br/>
 </h1>
 <button id="gen">Generar_Key</button>
 <br/>
@@ -35,6 +34,16 @@ GENERADOR DE PERSONAJES<br/> ALEATORIOS<br/>
 
 <div id="result2"></div>
 
+<br/><br/>
+
+<hr/>
+
+<h3>SUBIR TUS PROPIAS IMAGENES</h3>
+<div class="subir">
+<input type="file" id="file" accept="image/*" onchange="upArchive()"/>
+
+<button id="imageup">Subir con link</button>
+</div>
 <script src="index.js"></script>
 </body>
 </html>
