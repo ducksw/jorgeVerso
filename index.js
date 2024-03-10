@@ -3,6 +3,7 @@ document.getElementById('gen').setAttribute('onclick', 'generator()')
 document.getElementById('copy').setAttribute('onclick', 'copiar()')
 document.getElementById('btn-info').setAttribute('onclick', 'info()')
 document.getElementById('imageup').setAttribute('onclick', 'upLink()')
+document.getElementById('deleteImage').setAttribute('onclick', 'deleArr()')
 
 const txt = "43pgpvwin8479kK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSH59864kmuDUyFqCjBiCPLYePT1StfQn1u015384ZhkPJczzzFXjYZ1U";
 var cont = 0;
@@ -80,6 +81,10 @@ function call() {
   } else {
     document.getElementById('result').innerHTML = "Cargando..."
 
+    if (image == "") {
+      document.getElementById('result').innerHTML = "No hay imagenes"
+    }
+
     let pic = document.getElementById('image')
 
     setTimeout(function() {
@@ -140,6 +145,15 @@ function upLink() {
     image.push({name: nm, src: URL})
   }
   console.log(image)
+}
+
+function deleArr() {
+  image = []
+  console.log(image, "imagens eliminadas")
+
+  if (image == "") {
+    document.getElementById('result').innerHTML = "Imagenes eliminada"
+  }
 }
 
 var frcont = 0
