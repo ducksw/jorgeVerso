@@ -153,6 +153,7 @@ function upArchive() {
 
     subida.innerHTML = ""
     }
+
     console.log(image)
   }
 }
@@ -189,8 +190,12 @@ function upLink() {
 }
 
 function deleArr() {
-  image = []
-  console.log(image, "imagens eliminadas")
+  if (image == "") {
+    document.getElementById('result').innerHTML = "No hay imagenes cargadas"
+  } else {
+    image = []
+    console.log(image, "imagens eliminadas")
+  }
 
   if (image == "") {
     document.getElementById('result').innerHTML = "Imagenes eliminada"
