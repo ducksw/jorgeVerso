@@ -185,7 +185,7 @@ function upLink() {
   console.log(image)
 }
 
-function deleArr() {
+function delearr() {
   image = []
   console.log(image, "imagens eliminadas")
 
