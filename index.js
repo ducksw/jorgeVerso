@@ -4,11 +4,11 @@ document.getElementById('copy').setAttribute('onclick', 'copiar()')
 document.getElementById('btn-info').setAttribute('onclick', 'info()')
 document.getElementById('imageup').setAttribute('onclick', 'upLink()')
 document.getElementById('deleteImage').setAttribute('onclick', 'deleArr()')
+var subida = document.getElementById('subida')
 
 const txt = "43pgpvwin8479kK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSH59864kmuDUyFqCjBiCPLYePT1StfQn1u015384ZhkPJczzzFXjYZ1U";
 var cont = 0;
 let cn = 0
-
 
 function ran() {
   let r = ""
@@ -37,7 +37,8 @@ function generator() {
 
   document.getElementById('result').innerHTML = "Pending..."
 }
-// ### Personajes DEFAULT ###
+
+// Personajes DEFAULT
 let image = [
   { 
     name: "Jorgito tu Terror",
@@ -128,7 +129,7 @@ function upArchive() {
   let rd = new FileReader();
 
   if (file) {
-    let nm = prompt("Coloca del personaje")
+    let nm = prompt("Coloca el nombre del personaje")
     rd.readAsDataURL(archivo );
     rd.onloadend = function () {
       //document.getElementById("img").src = reader.result;
@@ -138,15 +139,34 @@ function upArchive() {
   }
 }
 
+var lcont = 0
 function upLink() {
   let nm = prompt("Coloca el nombre del personaje")
   let URL = prompt("Coloca el URL")
 
-  if (nm == ""|| URL == "") {
+  if (nm == "" || nm == null) {
+    alert("Complete todos los campos")
+  } else if (URL == "" || URL == null) {
     alert("Complete todos los campos")
   } else {
-    image.push({name: nm, src: URL})
+    setTimeout(function() {
+      subida.innerHTML = "Cargando Imagen.."
+
+      let lin = setInterval(function() {
+        for (let i = 0; i < 1; i++) {
+          subida.innerHTML = "Imagen Cargada";
+        }
+        image.push({name: nm, src: URL})
+
+        while (lcont >= 1) {
+          clearInterval(lin);
+        }
+
+      }, 4000)
+    }, 100)
+    subida.innerHTML = ""
   }
+
   console.log(image)
 }
 

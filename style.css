@@ -135,3 +135,14 @@ hr {
   justify-content: center;
   gap: 10px;
 }
+
+#deleteImage {
+  position: absolute;
+}
+
+#subida {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+}
