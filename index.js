@@ -132,8 +132,23 @@ function upArchive() {
     let nm = prompt("Coloca el nombre del personaje")
     rd.readAsDataURL(archivo );
     rd.onloadend = function () {
-      //document.getElementById("img").src = reader.result;
-      image.push({name: nm, src: rd.result})
+    setTimeout(function() {
+      subida.innerHTML = "Cargando Imagen.."
+
+      let lin = setInterval(function() {
+        for (let i = 0; i < 1; i++) {
+          subida.innerHTML = "Imagen Cargada";
+        }
+        image.push({name: nm, src: rd.result})
+
+        while (lcont >= 1) {
+          clearInterval(lin);
+        }
+
+      }, 4000)
+    }, 100)
+
+    subida.innerHTML = ""
     }
     console.log(image)
   }
