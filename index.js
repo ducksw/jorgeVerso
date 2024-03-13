@@ -40,6 +40,7 @@ function generator() {
 
 // Personajes DEFAULT
 let image = [
+  /*
   { 
     name: "Jorgito tu Terror",
     src: "https://e.radio-grpp.io/normal/2022/03/25/074807_1237177.jpg" 
@@ -71,6 +72,7 @@ let image = [
     name: "El carro de Cristian Dominguez",
     src: "https://i0.wp.com/informateperu.pe/wp-content/uploads/2024/01/image-73.png?resize=1200%2C675&ssl=1",
   },
+  */
 ]
 
 function call() {
@@ -103,7 +105,8 @@ function call() {
 
         document.getElementById('result').innerHTML = "Eres"
         document.getElementById('result2').innerHTML = img.name
-        document.getElementById('result2').style.background = "linear-gradient(90deg, rgba(56,56,16,1) 0%, rgba(224,224,68,1) 100%)"
+        document.getElementById('result2').style.border = "1px solid black"
+        //document.getElementById('result2').style.background = "linear-gradient(90deg, rgba(56,56,16,1) 0%, rgba(224,224,68,1) 100%)"
 
         console.log(img)
       }
@@ -156,8 +159,8 @@ function upArchive() {
 
 var lcont = 0
 function upLink() {
-  let nm = prompt("Coloca el nombre del personaje")
   let URL = prompt("Coloca el URL")
+  let nm = prompt("Coloca el nombre del personaje")
 
   if (nm == "" || nm == null) {
     alert("Complete todos los campos")
@@ -185,7 +188,7 @@ function upLink() {
   console.log(image)
 }
 
-function delearr() {
+function deleArr() {
   image = []
   console.log(image, "imagens eliminadas")
 
