@@ -1,9 +1,9 @@
 document.getElementById('btn').setAttribute('onclick', 'call()')
 document.getElementById('gen').setAttribute('onclick', 'generator()')
 document.getElementById('copy').setAttribute('onclick', 'copiar()')
-document.getElementById('btn-info').setAttribute('onclick', 'info()')
-document.getElementById('imageup').setAttribute('onclick', 'upLink()')
-document.getElementById('deleteImage').setAttribute('onclick', 'deleArr()')
+//document.getElementById('btn-info').setAttribute('onclick', 'info()')
+//document.getElementById('imageup').setAttribute('onclick', 'upLink()')
+//document.getElementById('deleteImage').setAttribute('onclick', 'deleArr()')
 var subida = document.getElementById('subida')
 
 const txt = "43pgpvwin8479kK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSH59864kmuDUyFqCjBiCPLYePT1StfQn1u015384ZhkPJczzzFXjYZ1U";
@@ -40,39 +40,66 @@ function generator() {
 
 // Personajes DEFAULT
 let image = [
-  /*
   { 
-    name: "Jorgito tu Terror",
-    src: "https://e.radio-grpp.io/normal/2022/03/25/074807_1237177.jpg" 
+    name: "Coronel Jorgito",
+    src: "img/Coronel_Jorgito.png",
   },
-  {
-    name: "Ricardo el Inmortal",
-    src: "https://larepublica.cronosmedia.glr.pe/original/2022/01/18/61e73bca2b61d2649f3d40cb.jpg"
+  { 
+    name: "Jorgito Abogado",
+    src: "img/Jorgito_Abogado.png",
   },
-  {
-    name: "Gerardo",
-    src: "https://imgmedia.larepublica.pe/640x640/larepublica/migration/images/SMDAWVNKANE3RBAJVZBHIIKU4U.webp"
+  { 
+    name: "Jorgito Basurero",
+    src: "img/Jorgito_Basurero.png",
   },
-  { name: "El Cojo",
-    src: "https://larepublica.cronosmedia.glr.pe/migration/images/MW3DA4AKQFCCHMRNEFGO42S3LQ.jpg"
+  { 
+    name: "Jorgito Cevichero",
+    src: "img/Jorgito_Cevichero.png",
   },
-  {
-    name: "Dayanita",
-    src: "https://e.rpp-noticias.io/xlarge/2023/04/27/022602_1420807.jpg"
+  { 
+    name: "Jorgito Emolientero",
+    src: "img/Jorgito_Emolientero.png",
   },
-  {
-    name: "Chupetin Trujillo",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQHYufIQ03fYC0Y5e-Q9uLvFXcnGxayTW-9X6iPMTGw&s"
+  { 
+    name: "Jorgito Senati",
+    src: "img/Jorgito_Senati.png",
   },
-  {
-    name: "Cristian Dominguez",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8pKW0mSbvroLzw4mlnGkcH98QjRKrsP4I3HYqtCHow&s"
+  { 
+    name: "Jorgito Cobrador de Combi",
+    src: "img/Jorgito_cobrador_de_combi.png",
   },
-  {
-    name: "El carro de Cristian Dominguez",
-    src: "https://i0.wp.com/informateperu.pe/wp-content/uploads/2024/01/image-73.png?resize=1200%2C675&ssl=1",
+  { 
+    name: "Jorgito Vendedor de Huevitos de Codorniz",
+    src: "img/Jorgito_vendedor_de_huevitos_de_codorniz.png",
   },
-  */
+  { 
+    name: "Jorgito Emo",
+    src: "img/jorge-emo.png",
+  },
+  { 
+    name: "Jorgito Chamo",
+    src: "img/jorge_chamo.png",
+  },
+  { 
+    name: "Jorgito Mario Brown",
+    src: "img/jorge_mario.png",
+  },
+  { 
+    name: "Jorgito Vendedor de Periodicos",
+    src: "img/jorge_vendedor.png",
+  },
+  { 
+    name: "Jorgito Cevichero",
+    src: "img/Jorgito_Cevichero.png",
+  },
+  { 
+    name: "Jorgito y Kuking",
+    src: "img/jorge_y_Kuking.png",
+  },
+  { 
+    name: "Jorgito Albañil",
+    src: "img/jorgito_albanil.png",
+  },
 ]
 
 function call() {
@@ -127,6 +154,8 @@ function copiar() {
   navigator.clipboard.writeText(result)
 }
 
+
+/*
 function upArchive() {
   let archivo = document.getElementById("file").files[0];
   let rd = new FileReader();
@@ -215,3 +244,4 @@ function info() {
     frcont--
   }
 }
+*/

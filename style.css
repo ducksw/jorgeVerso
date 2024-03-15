@@ -36,8 +36,9 @@ input:focus {
 
 h1 {
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: normal;
+  margin-top: 35px;
 }
 
 section {
@@ -51,8 +52,8 @@ section {
 
 #image {
   display: flex;
-  width: 220px;
-	height: 220px; 
+  width: 350px;
+	height: 350px; 
 	background-position: center; 
 	background-repeat: no-repeat; 
 	background-size: cover; 
