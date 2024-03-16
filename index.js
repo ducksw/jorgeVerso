@@ -106,6 +106,7 @@ function call() {
   let inp = document.getElementById('input').value
   let result = document.getElementById('result').innerHTML 
 
+
    if (inp != result || inp == "") {
     alert("GENERA UN CODIGO")
   } else {
@@ -148,7 +149,6 @@ function copiar() {
   let result = document.getElementById('result').innerHTML 
   navigator.clipboard.writeText(result)
 }
-
 
 /*
 function upArchive() {

@@ -28,6 +28,7 @@ main {
 }
 
 input {
+  max-width: 100%;
   width: 500px;
   font-size: 18px;
   border: 1px solid black;

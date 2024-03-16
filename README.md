@@ -5,4 +5,3 @@
     - (GUIA)["https://es.stackoverflow.com/questions/587780/refrescar-p%C3%A1gina-y-mantener-los-datos-de-formulario"]
   - <del>Crear una ventana de info</del>
   - Crear un boton para que tu mismo puedas subir tus fotos random.
-
