@@ -1,12 +1,16 @@
 body {
   font-family: monospace;
   margin: 0;
+  background-color: #333;
+  color: white;
 }
 
 main {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 5px;
+  height: 100vh; background-image: radial-gradient(circle, #472525, #371d1f, #261619, #180e10, #000000);
 }
 
 #result {
@@ -38,16 +42,6 @@ h1 {
   text-align: center;
   font-size: 40px;
   font-weight: normal;
-  margin-top: 35px;
-}
-
-section {
-  height:224px;
-  width:224px;
-  border: 1px dotted black;
-  background-position: center; 
-	background-repeat: no-repeat; 
-  margin: auto;
 }
 
 #image {
@@ -58,10 +52,9 @@ section {
 	background-repeat: no-repeat; 
 	background-size: cover; 
   margin: auto;
-  border: 1px dotted black;
+  border: 1px dotted darkred;
   margin-top: 20px;
 }
-
 
 button {
   display: flex;
@@ -81,6 +74,7 @@ button {
 .bton {
   display: flex;
   gap: 3px;
+  margin-top: 10px;
 }
 
 .frame {

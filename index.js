@@ -124,16 +124,11 @@ function call() {
         let img = image[randName]
 
         pic.style.backgroundImage = `url(${img.src})`
-        pic.style.boxShadow = "0px 0px 20px black"
-        //pic.style.backgroundSize = "cover"
-        //pic.style.transition = "all 3s"
-        //pic.style.width = "300px,
-        //pic.style.border = "1px dotted black"
+        pic.style.boxShadow = "0px 0px 20px brown"
 
         document.getElementById('result').innerHTML = "Eres"
         document.getElementById('result2').innerHTML = img.name
-        document.getElementById('result2').style.border = "1px solid black"
-        //document.getElementById('result2').style.background = "linear-gradient(90deg, rgba(56,56,16,1) 0%, rgba(224,224,68,1) 100%)"
+        document.getElementById('result2').style.border = "1px solid brown"
 
         console.log(img)
       }
