@@ -21,6 +21,7 @@ function ran() {
   return r
 }
 
+
 function generator() {
   var limit = setInterval(function() {
     cont++
