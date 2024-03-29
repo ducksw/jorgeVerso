@@ -18,9 +18,9 @@ function ran() {
     r += txt.charAt(Math.floor(Math.random() * txt.length));
     c += 1
   }
+
   return r
 }
-
 
 function generator() {
   var limit = setInterval(function() {
