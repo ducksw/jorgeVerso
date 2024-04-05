@@ -9,11 +9,9 @@ function token(l) {
   return save;
 }
 
-var t = token(30)
+var t = token(40)
 
 console.log("## TOKEN ##")
-console.log("+--------------------------------------------------+");
-console.log(`|${t}|`);
-console.log("+--------------------------------------------------+");
+console.log(t);
 //console.log(`---> ${t}`)
 
