@@ -9,9 +9,18 @@ function token(l) {
   return save;
 }
 
-var t = token(40)
+var c = 0;
+let temp = setInterval(function() {
+  c++
+  var arr = []
+  var t = token(40)
+  arr.push(t);
 
-console.log("## TOKEN ##")
-console.log(t);
-//console.log(`---> ${t}`)
+  //console.log("#TOKEN")
+  console.log("===>", c, arr)
 
+
+  if (c >= 6) {
+    clearInterval(temp)
+  }
+}, 1000)
