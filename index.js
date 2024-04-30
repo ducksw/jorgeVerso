@@ -107,7 +107,7 @@ function call() {
   let inp = document.getElementById('input').value
   let result = document.getElementById('result').innerHTML 
 
-   if (inp != result || inp == "") {
+  if (inp != result || inp == "") {
     alert("GENERA UN CODIGO")
   } else {
     document.getElementById('result').innerHTML = "Cargando..."
@@ -120,6 +120,7 @@ function call() {
 
     setTimeout(function() {
       cn++
+
       if (cn >= 1) {
         let randName = Math.floor(Math.random() * image.length)
         let img = image[randName]
