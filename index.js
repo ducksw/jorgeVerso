@@ -101,6 +101,14 @@ let image = [
     name: "Jorgito Albañil",
     src: "img/jorgito_albanil.png",
   },
+  {
+    name: "Jorgito Joker",
+    src: "img/jorge-joker.jpg"
+  },
+  {
+    name: "Jorgito Mototaxista",
+    src: "img/jorge-moto.jpg"
+  },
 ]
 
 function call() {
